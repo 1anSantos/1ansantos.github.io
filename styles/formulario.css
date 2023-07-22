@@ -3,6 +3,14 @@ body {
     display: flex;
     justify-content: space-between;
 }
+aside {
+    width: 45vw;
+    padding: 38px 30px 0 30px;
+    background-color: #fff;
+}
+aside article, aside img {
+    margin-left: 2vw;
+}
 label {
     display: block;
 }
