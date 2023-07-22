@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    color: #0000ff;
+}
+a {
+    color: rgb(196, 72, 0);
+}
+dl {
+    margin-left: 20px;
+}
+dt {
+    margin-top: 30px;
+    font-weight: bold;
+}
+.ler-mais {
+    cursor: pointer;
+    color: #3636fa;
+    text-decoration: underline;
+}
+.endereco-pag {
+    text-decoration: none;
+    transition: .2s;
+    font-weight:600;
+    color: #81149c;
+}
+.endereco-pag:hover {
+    color: #4b005e;
+    text-shadow: -3px 2px 1.5px rgb(225, 143, 236);
+}
+.voltarTopo {
+    position: fixed;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    top: 25px;
+    right: 25px;
+    color: rgb(223, 223, 223);
+}
+.voltarTopo_btn {
+    padding: 25px;
+    border-radius: 30px;
+    transition: background-color .3s;
+    border: 3px outset #010d47;
+    background-color: #2121da;
+}
+.voltarTopo_btn:hover {
+    background-color: #0000bd;
+}
+.data {
+    color: #838383;
+    font-style: italic;
+    margin-bottom: 5px;
+}
