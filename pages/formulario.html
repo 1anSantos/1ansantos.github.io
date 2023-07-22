@@ -12,11 +12,16 @@
         <p style="font-size: 18px;"><strong>* denotes mandotory</strong></p>
         <form>
             <label for="fullname">Full name*:</label>
-            <input id="fullname" type="text" placeholder="FirstName LastName" required>
-            
+            <input id="fullname" type="text" pattern="^[a-zA-Z\s]+$" placeholder="FirstName LastName" required>
+            <input type="submit">
+        </form>
+        <form>
+            <label for="fullname">Full name*:</label>
+            <input id="fullname" type="text" pattern="[a-zA-Z]" placeholder="FirstName LastName" required>
+
             <label for="email">E-mail address*:</label>
             <input type="email" type="email" placeholder="EMAIL_ADDRESS" required>
-            
+
             <label for="tour-package">Select Tour Package*:</label>
             <select id="tour-package">
                 <option value="goa">Goa</option>
@@ -24,13 +29,13 @@
                 <option value="haryana">Haryana</option>
                 <option value="assam">Assam</option>
             </select>
-            
+
             <label for="arrival-date">Arrival date*:</label>
             <input id="arrival-date" type="date" required>
-            
+
             <label for="number-of-persons">Number of persons*:</label>
-            <input id="number-of-persons" type="number" min="1" placeholder="UNKNOWN_TYPE" required>
-            
+            <input id="number-of-persons" type="number" min="1" max="9" placeholder="UNKNOWN_TYPE" required>
+
             <label>What would you want to avail?*:</label>
             <div class="checkbox-area">
                 <label for="boarding">Boarding</label>
@@ -42,10 +47,10 @@
                 <label for="sight-seeing">Sight Seeing</label>
                 <input id="sight-seeing" value="sight-seeing" type="checkbox" name="avail">
             </div>
-            
+
             <label for="discout-coupon">Discout Coupon code:</label>
             <input id="discout-coupon" type="text" pattern="[a-zA-Z0-9]{6}" placeholder="UNKNOWN_TYPE" required>
-            
+
             <label>Terms and Conditions*:</label>
             <div class="radio-area">
                 <input id="agree-terms" type="radio" name="terms-and-conditions" value="true">
