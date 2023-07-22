@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+        }
+        label {
+            display: block;
+        }
+        .checkbox-area label, .radio-area label{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Travel reservation form</h1>
+        <p style="font-size: 18px;"><strong>* denotes mandotory</strong></p>
+        <form>
+            <label for="fullname">Full name*:</label>
+            <input id="fullname" type="text" placeholder="FirstName LastName" required>
+            
+            <label for="email">E-mail address*:</label>
+            <input type="email" type="email" placeholder="EMAIL_ADDRESS" required>
+            
+            <label for="tour-package">Select Tour Package*:</label>
+            <select id="tour-package">
+                <option value="goa">Goa</option>
+                <option value="andhra-pradesh">Andhra Pradesh</option>
+                <option value="haryana">Haryana</option>
+                <option value="assam">Assam</option>
+            </select>
+            
+            <label for="arrival-date">Arrival date*:</label>
+            <input id="arrival-date" type="date" required>
+            
+            <label for="number-of-persons">Number of persons*:</label>
+            <input id="number-of-persons" type="number" min="1" placeholder="UNKNOWN_TYPE" required>
+            
+            <label>What would you want to avail?*:</label>
+            <div class="checkbox-area">
+                <label for="boarding">Boarding</label>
+                <input id="boarding" value="boarding" type="checkbox" name="avail">
+                <br>
+                <label for="fooding">Fooding</label>
+                <input id="fooding" value="fooding" type="checkbox" name="avail">
+                <br>
+                <label for="sight-seeing">Sight Seeing</label>
+                <input id="sight-seeing" value="sight-seeing" type="checkbox" name="avail">
+            </div>
+            
+            <label for="discout-coupon">Discout Coupon code:</label>
+            <input id="discout-coupon" type="text" pattern="[a-zA-Z0-9]{6}" placeholder="UNKNOWN_TYPE" required>
+            
+            <label>Terms and Conditions*:</label>
+            <div class="radio-area">
+                <input id="agree-terms" type="radio" name="terms-and-conditions" value="true">
+                <label for="agree-terms">I agree</label>
+                <input id="disagree-terms" type="radio" name="terms-and-conditions" value="false">
+                <label for="disagree-terms">I disagree</label>
+            </div>
+            <br>
+            <input type="submit" value="Complete Reservation">
+        </form>
+    </main>
+    <img src="/travel-reservation-form.png" alt="imagem da atividade">
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif }
+        h2 { color: #0000ff }
+        a { color: rgb(196, 72, 0) }
+        dl { margin-left: 20px }
+        dt {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .ler-mais {
+            cursor: pointer;
+            color: #3636fa;
+            text-decoration: underline;
+        }
+        .endereco-pag {
+            text-decoration: none;
+            transition: .2s;
+            font-weight:600;
+            color: #81149c;
+        }
+        .endereco-pag:hover {
+            color: #4b005e;
+            text-shadow: -3px 2px 1.5px rgb(225, 143, 236);
+        }
+        .voltarTopo {
+            position: fixed;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            top: 25px;
+            right: 25px;
+            color: rgb(223, 223, 223);
+        }
+        .voltarTopo_btn {
+            padding: 25px;
+            border-radius: 30px;
+            transition: background-color .3s;
+            border: 3px outset #010d47;
+            background-color: #2121da;
+        }
+        .voltarTopo_btn:hover { background-color: #0000bd }
+        .data {
+            color: #838383;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+    </style>
+    <title>Meu Currículo</title>
+</head>
+<body>
+    <a href="#" class="voltarTopo">
+        <div class="voltarTopo_btn">Voltar ao Topo</div>
+    </a>
+    <main id="topo">
+        <h1>Ian dos Santos</h1>
+        <p><b>Nascimento:</b> 21/05/2006</p>
+        <p><b>E-mail:</b> isos1@aluno.ifal.edu.br</p>
+        <p><b>Telefone:</b> (82) 99922-3112</p>
+        <a href="https://media.discordapp.net/attachments/821785888396673045/1129543138986438737/Ian_dos_Santos__Cafe.jpeg?width=377&height=424" target="_blank">
+            <img style="width: 150px; border-radius: 100%;" src="https://media.discordapp.net/attachments/821785888396673045/1129543138986438737/Ian_dos_Santos__Cafe.jpeg?width=377&height=424" alt="Minha Foto de Perfil">
+        </a>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, voluptatum! Omnis, consectetur nisi. Mollitia eos debitis illum, neque a libero molestiae nisi non recusandae consequuntur quia odit asperiores fugit laudantium.
+            Vitae consectetur expedita, quod neque quam quisquam aliquam, in ipsa tenetur delectus aliquid illum possimus aut laudantium velit dolorum illo facere hic aperiam labore, tempora debitis repellat omnis. Explicabo, necessitatibus!
+            Culpa distinctio ratione nisi similique aliquam tempore ea! Quisquam quidem voluptas, illum accusamus quos expedita quod nobis modi nihil sunt eum delectus, tenetur est dignissimos? <span id="ler-mais-descricao-txt" style="display: none;">Ratione non ab qui delectus.
+            Id ipsam, quidem debitis totam, similique repudiandae quos placeat velit nulla amet repellat consequuntur commodi harum quia mollitia ipsa culpa aut molestias inventore magni vel excepturi. Assumenda autem enim reiciendis!
+            Voluptate atque repudiandae maiores facere. Ad doloremque consequatur soluta fugiat, ex aliquid. Officiis molestias ad itaque nam obcaecati hic a magnam quaerat, possimus sed esse architecto tenetur libero fugit nulla?</span>
+            <span id="ler-mais-descricao" class="ler-mais">ler mais</span>
+        </p>
+    </main>
+    <hr size="3" color="black">
+
+    <section id="sumario">
+        <h2>Sumário</h2>
+        <ol>
+            <li><a href="#redes-sociais" class="endereco-pag">Redes Sociais</a></li>
+            <li><a href="#competencias" class="endereco-pag">Competências</a></li>
+            <li><a href="#experiencia" class="endereco-pag">Experiência</a></li>
+            <li><a href="#pweb" class="endereco-pag">Atividades PWEB</a></li>
+        </ol>
+    </section>
+    <hr>
+
+    <section id="redes-sociais">
+        <h2>Redes Sociais</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/ian-dos-santos-a20956283/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/1anSantos">GitHub</a></li>
+            <li><a href="https://replit.com/@1anSantos">Replit</a></li>
+        </ul>
+    </section>
+    <hr>
+
+    <section id="competencias">
+        <h2>Competências</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </section>
+    <hr>
+
+    <section id="experiencia">
+        <h2>Experiência</h2>
+        <dl>
+            <dt>Site de Jogos em HTML</dt>
+            <dd class="data">[02/2023 – 03/2023]</dd>
+            <dd>Consiste ter criado um site com os jogos:
+                <ul style="margin: 5px">
+                    <li>Tic Tac Toe</li>
+                    <li>Jogo da Memória</li>
+                </ul>
+            </dd>
+            <dd>Link: <a href="https://replit.com/@1anSantos/IFAL-Mini-Games?v=1" target="_blank">https://replit.com/@1anSantos/IFAL-Mini-Games?v=1</a></dd>
+            
+            <dt>Calculadora</dt>
+            <dd class="data">[04/2023 – 05/2023]</dd>
+            <dd>Desafio era criar uma calculadora em HTML com os botões de memória (MR, MC, M+, M-), as 4 operações (+, -, x, /) e exponenciação.</dd>
+            <dd>Link: <a href="https://github.com/1anSantos/calculadora" target="_blank">https://github.com/1anSantos/calculadora</a></dd>
+            
+            <dt>Participação na OBI (Olimpíada Brasileira de Informática)</dt>
+            <dd class="data">[2023] - Em Andamento</dd>
+            <dd>Nível 1 – Programação em JavaScript</dd>
+
+            <dt>Participação na AMO (Alagoas no Mapa da OBI)</dt>
+            <dd class="data">[2023] - Atual</dd>
+            <dd>Projeto ao qual visa trazer alunos do 8º ano do Fundamental até o 3º ano do Ensino Médio para a área de TI e encorajar</dd>
+            <dd>a participação em <strong>Olimpíadas de Informática</strong> em especial a OBI.</dd>
+        </dl>
+    </section>
+    <hr>
+    <section id="pweb">
+        <h2>Projetos PWEB</h2>
+        <ul>
+            <li><a href="/formulario.html">Formulario</a></li>
+        </ul>
+    </section>
+    <hr>
+
+    <div style="align-items: center; display: flex; font-family: Arial; font-size: larger; font-weight: 900;">
+        <a href="https://media.discordapp.net/attachments/798239402865590284/1129541837145776179/Figurinha_Joinha.png?width=424&height=424" target="_blank">
+            <img width="270px" src="https://media.discordapp.net/attachments/798239402865590284/1129541837145776179/Figurinha_Joinha.png?width=424&height=424" alt="desenho dando joinha">
+        </a>
+        Obrigado pela Atenção!
+    </div>
+
+    <script type="text/javascript">
+        const lerMais = document.querySelectorAll(".ler-mais");
+        lerMais.forEach(btn => {
+            btn.onclick = function () {
+                let txt = document.getElementById(`${btn.id}-txt`);
+                if (txt.style.display == "none") {
+                    txt.style.display = "inline";
+                    btn.innerHTML = "ler menos";
+                }
+                else {
+                    txt.style.display = "none";
+                    btn.innerHTML = "ler mais";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
