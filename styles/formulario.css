@@ -1,0 +1,11 @@
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+}
+label {
+    display: block;
+}
+.checkbox-area label, .radio-area label{
+    display: inline;
+}
