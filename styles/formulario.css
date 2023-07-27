@@ -2,10 +2,13 @@ body {
     display: flex;
     justify-content: space-between;
 }
-aside {
-    width: 45vw;
-    padding: 38px 30px 0 30px;
-    border-left: 5px groove #969696;
+#divisor {
+    position: fixed;
+    height: 100%;
+    width: 5px;
+    top: 0;
+    background-color: #969696;
+    box-shadow: 2px 2px 5px #4e4e4e;
 }
 aside article, aside img {
     margin-left: 2vw;
