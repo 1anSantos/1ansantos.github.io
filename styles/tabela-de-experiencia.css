@@ -1,0 +1,24 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table {
+    border: 5px solid #000;
+    border-collapse: collapse;
+}
+th, td {
+    max-width: 250px;
+    text-align: center;
+}
+th {
+    padding: 20px;
+    border: 3px groove #000;
+}
+td {
+    padding: 10px;
+    border-left: 3px groove #000;
+    border-right:  3px groove #000;
+    border-bottom: 1px solid #5e5e5e;
+}
+.descricao {
+    text-align: justify;
+}
