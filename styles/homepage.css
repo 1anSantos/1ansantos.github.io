@@ -5,6 +5,7 @@ h2 {
     color: #0000ff;
 }
 a {
+    cursor: pointer;
     color: rgb(196, 72, 0);
 }
 dl {
@@ -19,15 +20,34 @@ dt {
     color: #3636fa;
     text-decoration: underline;
 }
-.endereco-pag {
+.endereco-pag, .unidade-academica a {
     text-decoration: none;
     transition: .2s;
-    font-weight:600;
+    font-weight: 600;
     color: #81149c;
 }
-.endereco-pag:hover {
+.endereco-pag:hover, .unidade-academica a:hover {
     color: #4b005e;
     text-shadow: -3px 2px 1.5px rgb(225, 143, 236);
+}
+.unidade-academica {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.unidade-academica h3 {
+    margin-bottom: 5px;
+}
+.data {
+    color: #5e5e5e;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.rodape {
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
 }
 .voltarTopo {
     position: fixed;
@@ -47,15 +67,4 @@ dt {
 }
 .voltarTopo_btn:hover {
     background-color: #0000bd;
-}
-.data {
-    color: #838383;
-    font-style: italic;
-    margin-bottom: 5px;
-}
-.rodape {
-    display: flex;
-    align-items: center;
-    font-size: larger;
-    font-weight: 900;
 }
