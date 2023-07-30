@@ -53,3 +53,9 @@ dt {
     font-style: italic;
     margin-bottom: 5px;
 }
+.rodape {
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
+}
