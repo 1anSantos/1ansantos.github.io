@@ -1,0 +1,29 @@
+div {
+    display: grid;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+}
+
+.esqcima {
+    top: 0;
+    left: 0;
+    background-color: #ff0000;
+}
+.esqbaixo {
+    bottom: 0;
+    left: 0;
+    background-color: #008000;
+}
+.dircima {
+    top: 0;
+    right: 0;
+    background-color: #ffff00;
+}
+.dirbaixo {
+    bottom: 0;
+    right: 0;
+    background-color: #0000ff;
+}
