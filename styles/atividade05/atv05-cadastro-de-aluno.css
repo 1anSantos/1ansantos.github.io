@@ -1,0 +1,28 @@
+td {
+    text-align: right;
+    height: 45px;
+    padding: 0;
+}
+label {
+    color: slategray;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+input {
+    margin-right: 20px;
+    font-size: 14px;
+    height: 30px;
+    border: 2px outset #c7c7c7;
+}
+button {
+    cursor: pointer;
+    margin: 0;
+    width: 85px;
+    height: 50px;
+    border: none;
+    background-image: linear-gradient(#f3f3f3 30%, #c9c9ae);
+}
+button:hover {
+    outline: 1px solid #5ad8ff;
+    background-image: linear-gradient(#f3f3f3 30%, #58b3cfc2);
+}
