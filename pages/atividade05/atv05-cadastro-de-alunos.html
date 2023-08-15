@@ -14,10 +14,10 @@
                     <label for=txt-matricula">Matrícula:</label>
                 </td>
                 <td>
-                    <input type="number" id="txt-matricula" name="txt-matricula" min="1">
+                    <input type="number" id="txt-matricula" name="txt-matricula" min="1" required>
                 </td>
                 <td>
-                    <button id="salvar-exibir">Salvar</button>
+                    <button type="submit" id="salvar-exibir">Salvar</button>
                 </td>
             </tr>
             <tr>
@@ -25,7 +25,7 @@
                     <label for="txt-nome">Nome:</label>
                 </td>
                 <td>
-                    <input type="text" id="txt-nome" name="txt-nome" pattern="^[a-zA-Z\s]+$">
+                    <input type="text" id="txt-nome" name="txt-nome" pattern="^[a-zA-Z\s]+$" required>
                 </td>
                 <td>
                     <button id="atualizar" type="submit">Atualizar</button>
@@ -36,10 +36,10 @@
                     <label for="txt-email">E-mail:</label>
                 </td>
                 <td rowspan="2">
-                    <input type="email" id="txt-email" name="txt-email">
+                    <input type="email" id="txt-email" name="txt-email" required>
                 </td>
                 <td>
-                    <button id="excluir">Excluir</button>
+                    <button type="reset" id="excluir">Excluir</button>
                 </td>
             </tr>
             </form>

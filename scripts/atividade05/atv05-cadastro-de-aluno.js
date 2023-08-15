@@ -8,7 +8,19 @@ const excluir_BTN = document.querySelector("#excluir");
 const Aluno = {};
 
 salvar_exibir_BTN.addEventListener("click", () => {
-    
+    if (salvar_exibir_BTN.innerText === "Exibir") {
+        matricula_input.value = Aluno.matricula;
+        nome_input.value = Aluno.nome;
+        email_input.value = Aluno.email;
+    }
+});
+
+excluir_BTN.addEventListener("click", () => {
+    for (const propriedade in Aluno) {
+        delete Aluno[propriedade];
+    };
+    salvar_exibir_BTN.innerText = "Salvar";
+    salvar_exibir_BTN.type = "submit";
 });
 
 function atualizar_cadastro() {
