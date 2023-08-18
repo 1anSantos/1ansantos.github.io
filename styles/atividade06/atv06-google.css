@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    transition: .2s;
+    background-color: #F4F5F2;
+}
+button:hover {
+    background-color: #c0c0c0;
+}
+
+footer {
+    background-color: #F2F2F2;
+}
