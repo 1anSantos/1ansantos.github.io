@@ -8,30 +8,66 @@
 </head>
 <body>
     <h1>Survey Form</h1>
-    <div>
+    <div class="forms">
         <p>Let us know how we can improve freeCodeCamp</p>
         <form>
             <fieldset>
                 <legend>Identification</legend>
-                <label for="name">Name:</label><br>
+                <label for="name"><span class="required">*</span>Name:</label>
                 <input type="text" id="name">
-                <br>
-                <label for="email">E-mail:</label><br>
+
+                <label for="email"><span class="required">*</span>E-mail:</label>
                 <input type="email" id="email">
-                <br>
-                <label for="age">Age:</label><br>
+
+                <label for="age"><span class="required">*</span>Age:</label>
                 <input type="number" id="age" min="1" max="200">
+
+                <label for="role"><span class="required">*</span>Which option best describes your current role?</label>
+                <select id="role" required>
+                    <option value="student">Student</option>
+                    <option value="worker">Worker</option>
+                    <option value="unemployed">Unemployed</option>
+                </select>
             </fieldset>
             <fieldset>
                 <legend>Feedback</legend>
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome">
-                <br>
-                <label for="email">E-mail:</label><br>
-                <input type="email" id="email">
+                <p><span class="required">*</span>How likely is that you would recommend freeCodeCamp to a friend?</p>
+                <div class="checkbox-radio">
+                    <input type="radio" name="recommend" id="definitely">
+                    <label for="definitely">Definitely</label>
+                    <br>
+                    <input type="radio" name="recommend" id="maybe">
+                    <label for="maybe">Maybe</label>
+                    <br>
+                    <input type="radio" name="recommend" id="not-sure">
+                    <label for="not-sure">Not sure</label>
+                </div>
+
+                <label for="role">What do you like most in FCC?</label>
+                <select id="role">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="teachers">Teachers</option>
+                    <option value="material">Material</option>
+                    <option value="projects">Projects</option>
+                    <option value="activities">Activities</option>
+                </select>
+
+                <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
+                <div class="checkbox-radio">
+                    <input type="checkbox" name="to-improve" id="front-end">
+                    <label for="front-end">Front-end Projects</label>
+                    <br>
+                    <input type="checkbox" name="to-improve" id="back-end">
+                    <label for="back-end">Back-end Projects</label>
+                    <br>
+                    <input type="checkbox" name="to-improve" id="data-visualization">
+                    <label for="data-visualization">Data Visualization</label>
+                </div>
             </fieldset>
-            <input type="submit">
-            <input type="reset">
+            <div class="end-row">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
         </form>
     </div>
 </body>
