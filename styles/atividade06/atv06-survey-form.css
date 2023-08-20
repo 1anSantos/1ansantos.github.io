@@ -42,6 +42,10 @@ input, select {
     background-color: transparent;
 }
 
+option {
+    color: #000;
+}
+
 .end-row {
     display: flex;
     justify-content: space-between;
