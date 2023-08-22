@@ -120,7 +120,7 @@ a:hover {
 main .logo {
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 30px;
 }
 div.search-area {
     display: flex;
