@@ -117,9 +117,10 @@ a:hover {
 }
 
 /* Main: Logo, Search bar & buttons */
-main {
-    /* display: flex; */
+main .logo {
+    display: flex;
     justify-content: center;
+    margin: 10px;
 }
 div.search-area {
     display: flex;
@@ -169,8 +170,8 @@ main div.buttons>button {
     padding-bottom: 10px;
     border-width: 0;
     border-radius: 5px;
-    color: #414141;
-    background-color: #cacaca;
+    color: #6e6e6e;
+    background-color: #ececec;
 }
 main div.buttons>button:hover {
     box-shadow: 0 0 5px #000;
