@@ -19,6 +19,7 @@ body {
     background-color: #202124;
 }
 .dark-theme a,
+.dark-theme #settings-board,
 .dark-theme div.search-area>input,
 .dark-theme main div.buttons>button,
 .dark-theme div.search-area>.keyboard,
@@ -28,15 +29,18 @@ body {
 .dark-theme .material-symbols-outlined.notification { 
     color: #fff;
 }
-.dark-theme div.search-area:hover {
-    background-color: #303134;
-}
+.dark-theme div.search-area:hover,
 .dark-theme main div.buttons>button {
     background-color: #303134;
 }
 .dark-theme main div.buttons>button:hover {
     outline: 1px solid #b3b3b391;
     background-color: #282a2c;
+}
+.dark-theme #settings-board {
+    background-color: #161618;
+}.dark-theme #settings-board div:hover {
+    background-color: #252424;
 }
 .dark-theme footer {
     background-color: #171717;
@@ -116,11 +120,38 @@ a:hover {
     background-color: #7e7e7e60;
 }
 
+/* Settings */
+#settings-board {
+    position: absolute;
+    right: 35px;
+    bottom: 48px;
+    width: 208px;
+    padding: 5px 0 5px 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #fff;
+    box-shadow: 0 0 15px #00000042;
+}
+#settings-board div {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+}
+#settings-board div:hover {
+    background-color: #d3d3d3;
+}
+#settings-board hr {
+    margin: 5px 0 5px 0;
+}
+
 /* Main: Logo, Search bar & buttons */
 main .logo {
     display: flex;
     justify-content: center;
     margin: 30px;
+}
+main .logo.perry img {
+    transform: translate(10%);
 }
 div.search-area {
     display: flex;

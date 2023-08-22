@@ -16,15 +16,15 @@
         </div>
         <div class="side">
             <a target="_blank" href="https://mail.google.com/">Gmail</a>
-            <a target="_blank" href="https://www.google.com/imghp?hl=pt-br">Images</a>
+            <a target="_blank" href="https://www.google.com/imghp?hl=en">Images</a>
             <span class="material-symbols-outlined apps">apps</span>
             <span class="material-symbols-outlined notification">circle_notifications</span>
             <span class="material-symbols-outlined user">account_circle</span>
         </div>
     </header>
     <main>
-        <div class="logo">
-            <img src="../../multimedia/img/perry-pesquisa.png" alt="imagem do perry ornintorrinco">
+        <div class="logo perry">
+            <img src="../../multimedia/img/perry-search.png" alt="image of perry the platypus">
         </div>
     <div class="search-area">
             <div class="magnifying-glass"><span class="material-symbols-outlined">search</span></div>
@@ -46,22 +46,15 @@
         <div class="side">
             <a target="_blank" href="https://policies.google.com/privacy">Privacy</a>
             <a target="_blank" href="https://policies.google.com/terms">Terms</a>
-            <a class="settings">Settings</a>
+            <a id="settings">Settings</a>
+        </div>
+        <div id="settings-board" style="display: none;">
+            <div class="change-logo">Change Logo</div>
+            <hr>
+            <div class="change-theme">Change Theme</div>
         </div>
     </footer>
 
-    <script>
-        const body = document.body
-        const settings = document.querySelector(".settings");
-        settings.addEventListener("click", () => {
-            body.classList.toggle("dark-theme");
-        });
-        
-        const search = document.querySelector("#search");
-        const magnifyingGlass = document.querySelector("div.magnifying-glass");
-        magnifyingGlass.addEventListener("click", () => {
-            search.focus();
-        })
-    </script>
+    <script src="../../scripts/atividade06/atv06-google.js"></script>
 </body>
 </html>
