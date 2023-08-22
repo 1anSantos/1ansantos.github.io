@@ -134,7 +134,6 @@ div.search-area {
 div.search-area:hover {
     outline: none;
     box-shadow: 0 0 10px #00000042;
-    background-color: #afafaf;
 }
 div.search-area>input {
     flex: content;
