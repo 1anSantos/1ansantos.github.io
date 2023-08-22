@@ -52,7 +52,7 @@ header,
 footer {
     user-select: none;
     position: absolute;
-    display: block flex;
+    display: flex;
     justify-content: space-between;
     width: calc(100vw - 20px);
     padding: 10px;
