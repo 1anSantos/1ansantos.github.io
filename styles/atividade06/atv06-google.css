@@ -117,7 +117,7 @@ a:hover {
 .material-symbols-outlined.apps:hover,
 .material-symbols-outlined.user:hover,
 .material-symbols-outlined.notification:hover {
-    background-color: #7e7e7e60;
+    background-color: #7e7e7e50;
 }
 
 /* Settings */
@@ -159,7 +159,7 @@ div.search-area {
     align-items: center;
     width: 560px;
     height: 46px;
-    padding: 7px;
+    padding: 3px 10px;
     border-radius: 200px;
     outline: 1px solid #b3b3b385;
 }
@@ -183,7 +183,7 @@ div.search-area>.image {
 }
 div.search-area>div.keyboard,
 div.search-area>div.magnifying-glass {
-    padding-bottom: 5px;
+    margin-bottom: px;
     height: fit-content;
     color: #414141;
 }
