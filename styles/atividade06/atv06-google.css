@@ -205,7 +205,6 @@ main div.buttons>button {
     background-color: #ececec;
 }
 main div.buttons>button:hover {
-    box-shadow: 0 0 5px #000;
-    outline: 1px solid #3a3a3a;
-    background-color: #a3a3a3;
+    box-shadow: 0 0 3px #414141;
+    outline: 1px solid #929292;
 }
