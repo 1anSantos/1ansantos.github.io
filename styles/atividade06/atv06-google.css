@@ -183,7 +183,7 @@ div.search-area>.image {
 }
 div.search-area>div.keyboard,
 div.search-area>div.magnifying-glass {
-    margin-bottom: px;
+    margin-bottom: 6px;
     height: fit-content;
     color: #414141;
 }
