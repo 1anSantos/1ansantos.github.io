@@ -14,41 +14,40 @@ body {
     color: #474747;
 }
 
-table {
+.table {
+    width: fit-content;
     border-collapse: collapse;
 }
 
-thead tr {
+.table-row {
+    display: grid;
+    grid-template-columns: 30px 175px repeat(9, 50px);
+    border-bottom: 2px solid #9e9e9e;
+}
+.table-head .table-row {
     font-weight: bolder;
+    border-top: 2px solid #9e9e9e;
     background-color: #dbdbdb;
 }
-
-tbody tr {
+.table-body .table-row {
     cursor: pointer;
 }
-tbody tr:hover {
+.table-body .table-row:hover {
     background-color: #f1f1f1;
 }
 
-tr {
-    border-width: 2px 0;
-    border-style: solid;
-    border-color: #9e9e9e;
-}
-
-td {
-    text-align: center;
-    padding: 5px 15px;
-}
-
-.clube {
+.table-data {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    text-align: left;
+    justify-content: center;
+    padding: 5px 10px;
 }
 
-.clube img {
+.table-data.clube {
+    justify-content: space-between;
+}
+
+.table-data.clube img {
     width: 2rem;
     margin-left: 1rem;
 }
