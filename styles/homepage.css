@@ -37,6 +37,10 @@ body {
     background-image: linear-gradient(to right, #dbdbdb 50%, #212121 50%);
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     justify-content: space-around;
@@ -64,7 +68,6 @@ header {
 .side a {
     color: #dbdbdb;
     margin: 0 .5rem;
-    text-decoration: none;
 }
 .side a:hover {
     text-decoration-line: underline;
@@ -122,6 +125,29 @@ main .name {
     box-shadow: 0 0 10px #3d3d3d;
     animation: spinning 5s linear infinite;
     background-image: linear-gradient(to right, #212121 50%, #dbdbdb 50%);
+}
+
+.social-network {
+    display: flex;
+}
+.social-network svg {
+    transition: .1s;
+    margin: 0px 5px;
+}
+.social-network svg:hover {
+    opacity: 0.5;
+}
+.social-network .light,
+.social-network .dark {
+    margin: 10px 5px;
+}
+.light svg{
+    height: 1.7em;
+    fill: #212121;
+}
+.dark svg{
+    height: 1.7em;
+    fill: #dbdbdb;
 }
 
 footer {
