@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #1B1B1B;
+}
+
+.noticias {
+    margin: 5px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "one one two two"
+    "one one three four"
+    "five six seven seven"
+    "eight six seven seven";
+}
+
+h2 {
+    color: #e9e9e9;
+}
+
+.cartao {
+    margin: 0;
+    padding: 10px 20px;
+}
+.cartao:hover {
+    scale: 1.05;
+    box-shadow: 0 0 6px #000;
+}
+
+#one {
+    grid-area: one;
+    font-size: 3vw;
+    background-color: #E71E64;
+}
+#two {
+    grid-area: two;
+    font-size: 2vw;
+    background-color: #FC9C12;
+}
+#three {
+    grid-area: three;
+    background-color: #AA3BBB;
+}
+#four {
+    grid-area: four;
+    background-color: #566C7A;
+}
+#five {
+    grid-area: five;
+    background-color: #6A6A6A;
+}
+#six {
+    grid-area: six;
+    font-size: 2vw;
+    background-color: #3AD345;
+}
+#seven {
+    grid-area: seven;
+    font-size: 3vw;
+    background-color: #3490F3;
+}
+#eight {
+    grid-area: eight;
+    background-color: #4E008A;
+}
+
+@media screen and (max-width: 720px) {
+    .noticias {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: none;
+        gap: 0;
+        row-gap: 5px;
+    }
+    #one, #two,
+    #three, #four,
+    #five, #six,
+    #seven, #eight {
+        grid-area: auto;
+        font-size: 2vh;
+    }
+}
