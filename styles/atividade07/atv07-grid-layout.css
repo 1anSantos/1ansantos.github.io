@@ -19,6 +19,7 @@ body {
 
 div.grid-container {
     display: grid;
+    gap: 10px;
     grid-template-columns: 25vw 25vw 25vw;
     grid-template-rows: 20vh 20vh 20vh 20vh;
 }
@@ -27,9 +28,8 @@ div.grid-container>div {
     background-color: #f3b86f94;
     border: 2px solid #ff971794;
     color: #bd6d0cda;
-    margin: 5.5px;
     padding: 25px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 div.one {
