@@ -34,7 +34,18 @@ a:hover {
 }
 
 div.card {
-    /* text-align: justify; */
     padding: 10px 15px 30px 20px;
     background-color: #2A2A2A;
+}
+
+@media screen and (max-width: 750px) {
+    .center-container {
+        grid-template-columns: 1fr;
+    }
+    header {
+        grid-column: 1;
+    }
+    header a {
+        margin: 10px;
+    }
 }
