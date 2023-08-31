@@ -70,12 +70,12 @@ h2 {
 }
 #six {
     grid-area: six;
-    font-size: 2vw;
+    font-size: 1.7vw;
     background-color: #3AD345;
 }
 #seven {
     grid-area: seven;
-    font-size: 3vw;
+    font-size: 2.5vw;
     background-color: #3490F3;
 }
 #eight {
