@@ -10,13 +10,10 @@ body {
 
 .center-container {
     display: grid;
+    gap: 10px;
     grid-template-columns: minmax(350px, 500px) minmax(350px, 500px);
 }
 
-header,
-div.card {
-    margin: 5px;
-}
 header {
     grid-row: 1;
     grid-column: 1 / span 2;

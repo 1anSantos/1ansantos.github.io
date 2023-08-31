@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
+    background-color: #dbdbdb;
+}
+
+.wrap {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-decoration: underline;
+    text-decoration-skip: edges;
+}
+h3 {
+    font-size: 1em;
+}
+
+header {
+    padding: 20px;
+    border-bottom: 2px solid #c7c7c7;
+}
+header a {
+    font-size: 1.3rem;
+    color: #000;
+    transition: .1s;
+    text-decoration-thickness: 2px;
+    background-color: #95d417;
+}
+header a:hover {
+    background-color: #74ac05;
+}
+.redes-sociais {
+    margin: 10px 0;
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.bloco-informacao {
+    grid-template-columns: 1fr 2fr;
+}
+.titulo {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    grid-template-rows: auto;
+    text-align: center;
+}
+.linha {
+    font-size: 20px;
+    margin: 20px 0;
+    width: 642px;
+    display: grid;
+    grid-template-columns: 30% 60%;
+}
+.topico {
+    margin-left: 25px;
+}
+.descricao {
+    text-align: end;
+}
