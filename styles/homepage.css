@@ -105,6 +105,9 @@ header {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: #212121;
 }
+#menu-bar {
+    font-size: 8vw;
+}
 
 main {
     display: flex;
