@@ -78,18 +78,32 @@ header {
     margin: .3rem 0 0 .5rem;
 }
 
-.menu {
+#menu {
     display: none;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    z-index: 98;
     height: 2.3em;
     width: 2.3em;
     transition: .2s;
     border-radius: 100%;
 }
-.menu:hover {
+#menu:hover {
     background-color: #9999995b;
+}
+#menu-bar {
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 56;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: #212121;
 }
 
 main {
@@ -161,11 +175,11 @@ footer {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     .menu-links-and-lang {
         display: none;
     }
-    .menu {
+    #menu {
         display: flex;
     }
 }
