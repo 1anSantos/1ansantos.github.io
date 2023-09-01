@@ -27,7 +27,7 @@ const menuBar = document.querySelector("#menu-bar");
 menu.addEventListener("click", openMenu);
 
 function openMenu() {
-    if (menuBar.style.display === "none") {
+    if (getComputedStyle(menuBar).display === "none") {
         menuBar.style.display = "grid";
     }
     else {
