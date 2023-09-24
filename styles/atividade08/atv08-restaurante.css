@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+nav {
+    background-color: #202020;
+    box-shadow: 0 0 10px #292929;
+}
+nav h1 {
+    font-family: 'Italianno', cursive;
+    font-size: calc(3.5vw + 15px);
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: #960707;
+    text-shadow:-3px 2px 0 #470303;
+}
+
+.navbar-toggler {
+    scale: 1.3;
+    margin-right: 10px;
+    transition: .2s;
+    padding: 5px 7px;
+    border-radius: 25%;
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+}
+.navbar-toggler:hover {
+    background-color: rgba(141, 113, 141, 0.411);
+}
+
+#slide-comidas {
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background-color: #242424;
+}
+.carousel-item img {
+    width: 100%;
+    transform: translate(0, -20%);
+    mask-image: linear-gradient(#000, rgba(0,0,0, .35));
+    -webkit-mask-image: linear-gradient(#000, rgba(0,0,0, .35));
+}
+.carousel-item>.descricao {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: 25vw;
+    bottom: -68vh;
+    border-radius: 0 .5em 0 0;
+    padding: 5px 5px 10px 5px;
+    font-size: calc(2vw + 10px);
+    background-color: #bbbbbb;
+}
+.carousel-indicators [data-bs-target] {
+    border: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #0000009a;
+}
+
+.carousel-indicators [data-bs-target].active {
+    scale: 1.3
+}
+
+@media screen and (max-width: 760px) {
+    #slide-comidas {
+        height: 36vh;
+    }
+    .carousel-item img {
+        width: 100%;
+        transform: none;
+    }
+}

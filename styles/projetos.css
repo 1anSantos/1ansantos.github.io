@@ -37,6 +37,16 @@ div.card {
     padding: 10px 15px 30px 20px;
     background-color: #2A2A2A;
 }
+div.card div.card-title {
+    display: flex;
+    margin-bottom: -1em;
+    align-items: center;
+    justify-content: space-between;
+}
+div.card-title a>h3 {
+    color: #6463ce;
+    font-size: -2rem;
+}
 
 @media screen and (max-width: 750px) {
     .center-container {
