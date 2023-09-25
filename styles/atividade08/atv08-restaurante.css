@@ -211,6 +211,9 @@ footer {
     .container hr {
         grid-column: 1;
     }
+    .avaliacao .card-avaliacao {
+        grid-template-columns: 1fr;
+    }
     .input-grid-2,
     .input-grid-3 {
         grid-template-columns: 1fr;
