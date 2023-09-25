@@ -4,21 +4,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Restaurante Top</title>
+        <title>Giovanni's Restaurant</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="../../styles/atividade08/atv08-restaurante.css">
     </head>
 
     <body>
-        <nav class="navbar navbar-dark fixed-top">
+        <nav class="navbar fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><h1>Itallian Food</h1></a>
+                <a class="navbar-brand" href="#"><h1>Giovanni's Restaurant</h1></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuBar" aria-controls="menuBar" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="menuBar" aria-labelledby="menuBarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="menuBarLabel">Dark offcanvas</h5>
+                        <h5 class="offcanvas-title" id="menuBarLabel">Menu Area</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -48,7 +48,7 @@
             </div>
         </nav>
 
-        <div id="slide-comidas" class="carousel slide">
+        <div id="slide-comidas" class="carousel slide" data-bs-slide="carousel">
             <div class="carousel-indicators">
                 <button data-bs-target="#slide-comidas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button data-bs-target="#slide-comidas" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -57,27 +57,119 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="descricao">Panna Cotta</div>
-                    <img src="../../multimedia/img/panna-cotta.jpg" class="d-block w-100" alt="Panna Cotta">
+                    <img src="../../multimedia/img/panna-cotta.jpg" class="d-block w-100" draggable="false" alt="Panna Cotta">
                 </div>
                 <div class="carousel-item">
                     <div class="descricao">Risoto</div>
                     <img src="../../multimedia/img/risoto.webp" class="d-block w-100" draggable="false" alt="Risoto">
                 </div>
                 <div class="carousel-item">
-                    <div class="descricao">Panna Cotta</div>
+                    <div class="descricao">Bruschetta</div>
                     <img src="../../multimedia/img/bruschetta.jpg" class="d-block w-100" draggable="false" alt="Bruschetta">
                 </div>
             </div>
-            <button class="carousel-control-prev" data-bs-target="#slide-comidas" data-bs-slide="prev"></button>
-            <button class="carousel-control-next" data-bs-target="#slide-comidas" data-bs-slide="next"></button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slide-comidas" data-bs-slide="prev"></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slide-comidas" data-bs-slide="next"></button>
+        </div>
+        <div id="redes-sociais">
+            <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a target="_blank" href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
         </div>
 
-        <h2>teste</h2>
-        <h2>teste</h2>
-        <h2>teste</h2>
-        <h2>teste</h2>
-        <h2>teste</h2>
-        <h2>teste</h2>
+        <div class="container">
+            <div class="cartoes-restaurante">
+                <div id="info-restaurante" class="card text-bg-light">
+                    <div class="row g-0">
+                        <div class="col-md-4 carousel slide" id="slide-restaurante" data-bs-slide="carousel">
+                            <div class="carousel-indicators">
+                                <button data-bs-target="#slide-restaurante" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button data-bs-target="#slide-restaurante" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../../multimedia/img/restaurante-exterior.jpg" class="d-block" draggable="false" alt="Foto do Exterior do Restaurante">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../../multimedia/img/restaurante-interior.jpeg" class="d-block" draggable="false" alt="Foto do Interior do Restaurante">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#slide-restaurante" data-bs-slide="prev"></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#slide-restaurante" data-bs-slide="next"></button>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">Seja Bem-vindo</h5>
+                            <hr>
+                            <p class="card-text">Sinta-se bem-vindo ao mais novo restaurante italiano da cidade, aqui você irá encontrar todas as comidas típicas deliciosas da cultura italiana junto da experiência imersiva do local.</p>
+                            <p class="card-text">De segunda a sexta, das <span style="color: #0000ff">08:30</span> às <span style="color: #0000ff">17:30</span>.</p>
+                            <p class="card-text"><small class="text-body-secondary">Giovanni's Restaurant</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sobre-restaurante" class="card text-bg-light">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">Sobre</h5>
+                            <hr>
+                            <p class="card-text">Após viajar para a Itália o famoso Chef Francesco Giovanni resolveu criar um restaurante temático para mostrar ao mundo o valor da culinária italiana.</p>
+                            <p class="card-text"><span style="color: #0000ff">Mais atual vencedor da Copa Pistão e do Master Chef</span></p>
+                            <p class="card-text"><small class="text-body-secondary">Chef Francesco Giovanni</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../../multimedia/img/chefe-de-cozinha.jpg" class="d-block" alt="Foto do Chefe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://kit.fontawesome.com/b03cf2bbe7.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
