@@ -96,7 +96,6 @@ nav h1 {
 
 .cartoes-restaurante {
     display: grid;
-    grid-template-rows: auto auto;
     gap: 15px;
 }
 
@@ -204,12 +203,21 @@ footer {
         width: 100%;
         transform: none;
     }
+    #slide-comidas .carousel-item>.descricao {
+        bottom: -25vh;
+        width: 30vw;
+    }
     .container {
         grid-template-columns: 1fr;
     }
     #reserva,
+    #cardapio,
+    .avaliacao,
     .container hr {
         grid-column: 1;
+    }
+    #reserva-footer {
+        display: block;
     }
     .avaliacao .card-avaliacao {
         grid-template-columns: 1fr;
