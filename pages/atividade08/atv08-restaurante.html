@@ -82,7 +82,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fazer Pedido</button>
                     </div>
                 </div>
             </div>
@@ -125,13 +125,47 @@
                             </div>
                             <div class="col">
                                 <h6>Bebidas</h6>
-                                <p>Vinho Chianti (garrafa): R$ 60 a R$ 150, dependendo da marca e do restaurante</p>
-                                <p>Limoncello (dose): R$ 15 a R$ 30 por dose</p>
-                                <p>Espresso: R$ 3 a R$ 6 por xícara</p>
-                                <p>Negroni: R$ 20 a R$ 40 por coquetel</p>
-                                <p>Aperol Spritz: R$ 15 a R$ 30 por coquetel</p>
+                                <p>Vinho Chianti (garrafa) R$ 150, dependendo da marca e do restaurante</p>
+                                <p>Limoncello (dose) R$ 24 por dose</p>
+                                <p>Espresso R$ 6 por xícara</p>
+                                <p>Negroni R$ 40 por coquetel</p>
+                                <p>Aperol Spritz R$ 27 por coquetel</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Política de Cancelamento -->
+        <div class="modal modal-lg fade" id="modal-politica-cancelamento" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal-politica-cancelamento-label" aria-hidden="true" data-bs-theme="dark">
+            <div class="modal-dialog text-bg-dark">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modal-politica-cancelamento-label">Política de Cancelamento de Reservas</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                            <li>Prazo para Cancelamento:</li>
+                            - Os clientes podem cancelar suas reservas sem custos adicionais desde que o façam com pelo menos 24 horas de antecedência da data e hora da reserva.
+                            <li>Cancelamentos Tardios:</li>
+                            - Cancelamentos feitos dentro de 24 horas da data e hora da reserva estarão sujeitos a uma taxa de cancelamento de 50% do valor total da reserva.
+                            <li>Não Comparecimento:</li>
+                            - Caso um cliente não compareça à reserva sem cancelar previamente, será cobrada uma taxa de no-show de 100% do valor total da reserva.
+                            <li>Alterações na Reserva:</li>
+                            - Os clientes podem solicitar alterações em suas reservas (como mudança de horário ou número de pessoas) com pelo menos 24 horas de antecedência, sujeitas à disponibilidade. Alterações tardias podem estar sujeitas a taxas adicionais.
+                            <li>Política para Grupos Grandes:</li>
+                            - Para reservas de grupos com mais de 10 pessoas, pedimos que o cliente entre em contato conosco com pelo menos uma semana de antecedência. Cancelamentos ou alterações em reservas de grupos grandes devem ser feitos com pelo menos 48 horas de antecedência.
+                            <li>Reembolso e Créditos:</li>
+                            - As taxas de cancelamento serão aplicadas de acordo com as políticas acima mencionadas. Em caso de reembolso, o valor será devolvido ao cliente da mesma forma em que o pagamento foi efetuado, sempre após a dedução das taxas de cancelamento aplicáveis.
+                            <li>Emergências e Circunstâncias Excepcionais:</li>
+                            - Entendemos que circunstâncias excepcionais podem surgir. Se um cliente enfrentar uma situação de emergência, pedimos que entre em contato conosco o mais cedo possível para discutir a situação.
+                        </ol>
+                        Esta política de cancelamento foi estabelecida para garantir que possamos oferecer um serviço consistente e justo a todos os nossos clientes, ao mesmo tempo em que gerenciamos adequadamente nossa capacidade e recursos. Agradecemos sua compreensão e cooperação.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -210,6 +244,7 @@
             <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a>
             <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
             <a target="_blank" href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+            <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter fa-lg"></i></a>
         </div>
 
         <div class="container">
@@ -364,8 +399,13 @@
                         <label for="reserva-email">Email</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success"><i class="fa-solid fa-cart-shopping"></i> Reservar</button>
-                <button type="reset" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Reset</button>
+                <div id="reserva-footer">
+                    <div class="me-5">
+                        <button type="submit" class="btn btn-success"><i class="fa-solid fa-cart-shopping"></i> Reservar</button>
+                        <button type="reset" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Reset</button>
+                    </div>
+                    <a data-bs-toggle="modal" data-bs-target="#modal-politica-cancelamento">Saiba sobre nossa política de cancelamento de reservas</a>
+                </div>
             </form>
 
             <hr>

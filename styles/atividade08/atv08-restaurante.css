@@ -124,6 +124,18 @@ nav h1 {
 #reserva {
     grid-column: 1 / span 2;
 }
+#reserva-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#reserva-footer a {
+    cursor: pointer;
+    color: #940f0f;
+}
+#reserva-footer a:hover{
+    text-decoration-line: underline;
+}
 .input-grid-2,
 .input-grid-3 {
     display: grid;
@@ -135,6 +147,11 @@ nav h1 {
 }
 .input-grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+#modal-politica-cancelamento li {
+    margin-top: 10px;
+    font-weight: bolder;
 }
 
 footer {
