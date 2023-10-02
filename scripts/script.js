@@ -6,7 +6,7 @@ function updateTextColor(element) {
     const isBackgroundBlack = backgroundColor === "#212121";
 
     if (isBackgroundBlack) {
-        element.style.color = "#000";
+        element.style.color = "#212121";
     } else {
         element.style.color = "#fff";
     }
@@ -16,9 +16,6 @@ function updateTextColor(element) {
 textElement.forEach(element => {
     updateTextColor(element);
 });
-
-// Call the function whenever the window is resized
-window.addEventListener("resize", updateTextColor);
 
 //* Menu Bar 
 const menu = document.querySelector("#menu");
