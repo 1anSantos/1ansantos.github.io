@@ -88,6 +88,7 @@ header {
     width: 2.3em;
     transition: .2s;
     border-radius: 100%;
+    translate: 0 10%;
 }
 #menu:hover {
     background-color: #9999995b;
@@ -147,25 +148,23 @@ main .name {
 .social-network {
     display: flex;
 }
-.social-network svg {
+.social-network i {
     transition: .1s;
     margin: 0px 5px;
 }
-.social-network svg:hover {
+.social-network i:hover {
     opacity: 0.5;
-    scale: 1.2;
+    scale: 1.3;
 }
 .social-network .light,
 .social-network .dark {
     margin: 10px 5px;
 }
-.light svg{
-    height: 1.7em;
-    fill: #212121;
+.light i{
+    color: #212121;
 }
-.dark svg{
-    height: 1.7em;
-    fill: #dbdbdb;
+.dark i{
+    color: #dbdbdb;
 }
 
 footer {
