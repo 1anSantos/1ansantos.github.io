@@ -15,10 +15,11 @@ body {
 }
 
 header {
+    padding: 10px;
     grid-row: 1;
     grid-column: 1 / span 2;
     background-color: #2A2A2A;
-    padding: 10px;
+    box-shadow: 0 0 10px #000000;
 }
 header a {
     margin: 20px;
@@ -34,21 +35,47 @@ a:hover {
 }
 
 div.card {
-    padding: 10px 15px 30px 20px;
-    background-color: #2A2A2A;
+    /* padding: 10px 15px 30px 20px; */
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: 0 0 10px #000000;
 }
-div.card div.card-title {
+div.card>div.card-title {
     display: flex;
-    margin-bottom: -1em;
     align-items: center;
     justify-content: space-between;
+    background-color: #1f1f1f;
+    padding: 0 20px 10px;
 }
-div.card-title a>h3 {
+div.card div.card-title .nova-guia {
     color: #6463ce;
-    font-size: -2rem;
+    transition: .3s;
+}
+div.card div.card-title .nova-guia:hover {
+    color: #4946dd;
+    scale: 1.3;
+}
+div.card div.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2A2A2A;
+    padding: 0 20px 10px;
+}
+div.card div.card-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #252525;
+    color: #6d6d6d;
+    padding: 0 20px;
+}
+div.card div.card-footer div.vertical-line {
+    background-color: #1d1d1d;
+    height: 100%;
+    width: 2px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
     .center-container {
         grid-template-columns: 1fr;
     }
