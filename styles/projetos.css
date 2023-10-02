@@ -19,7 +19,8 @@ header {
     grid-row: 1;
     grid-column: 1 / span 2;
     background-color: #2A2A2A;
-    box-shadow: 0 0 10px #000000;
+    /* box-shadow: 0 0 10px #000000; */
+    border: 2px solid #000000;
 }
 header a {
     margin: 20px;
@@ -35,10 +36,11 @@ a:hover {
 }
 
 div.card {
-    /* padding: 10px 15px 30px 20px; */
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    box-shadow: 0 0 10px #000000;
+    grid-template-rows: auto 2fr;
+    /* box-shadow: 0 0 10px #000000; */
+    border: 2px solid #000000;
+    background-color: #2A2A2A;
 }
 div.card>div.card-title {
     display: flex;
@@ -46,6 +48,7 @@ div.card>div.card-title {
     justify-content: space-between;
     background-color: #1f1f1f;
     padding: 0 20px 10px;
+    height: 5em;
 }
 div.card div.card-title .nova-guia {
     color: #6463ce;
@@ -75,7 +78,7 @@ div.card div.card-footer div.vertical-line {
     width: 2px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
     .center-container {
         grid-template-columns: 1fr;
     }
