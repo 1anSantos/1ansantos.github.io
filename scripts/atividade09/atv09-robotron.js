@@ -1,4 +1,4 @@
-const slide = document.querySelector('#slide');
+const robotrons = document.querySelector('#slide');
 const btnVoltar = document.querySelector("#voltar");
 const btnAvancar = document.querySelector("#avancar");
 
@@ -14,21 +14,25 @@ function mudarDemonstracaoDoRobotron(tipo) {
         voltar = voltarSlide;
         avancar = avancarSlide;
     }
+    else if (tipo === 'Substituir') {
+        voltar = voltarSubstituicao;
+        avancar = avancarSubstituicao;
+    }
 }
 
 btnVoltar.addEventListener('click', () => voltar());
 btnAvancar.addEventListener('click', () => avancar());
 
 function voltarTrocaDeCor() {
-    const images = slide.querySelectorAll('img');
+    const images = robotrons.querySelectorAll('img');
     const img01 = images[images.length-1];
     const img02 = images[0];
-    slide.insertBefore(img01, img02);
+    robotrons.insertBefore(img01, img02);
 }
 function avancarTrocaDeCor() {
-    const images = slide.querySelectorAll('img');
+    const images = robotrons.querySelectorAll('img');
     const img01 = images[0];
-    slide.appendChild(img01);
+    robotrons.appendChild(img01);
 }
 
 function delay(ms) {
@@ -36,8 +40,36 @@ function delay(ms) {
 }
 
 async function voltarSlide() {
-    const images = slide.querySelectorAll('img');
-    slide.insertBefore(images[images.length - 1], images[0]);
+    const images = robotrons.querySelectorAll('img');
+    robotrons.insertBefore(images[images.length - 1], images[0]);
+    console.log(images)
+    
+    images[0].style.translate = '-375px';
+    await delay(0);
+    images[0].style.transition = '.5s';
+    images[0].style.translate = '0px';
+    images[1].style.transition = 'none';
+}
+async function avancarSlide() {
+    const images = robotrons.querySelectorAll('img');
+
+    images[1].style.translate = '-375px';
+    images[1].style.transition = '.3s';
+    images[0].style.translate = '-375px';
+    images[0].style.transition = '.3s';
+    // Aguarda um atraso de 500 milissegundos (0,5 segundo)
+    await delay(300);
+
+    images[1].style.transition = 'none';
+    images[0].style.transition = 'none';
+    images[1].style.translate = '0';
+    images[0].style.translate = '0';
+    robotrons.insertBefore(images[0], images[images.length - 1]);
+}
+
+async function voltarSubstituicao() {
+    const images = robotrons.querySelectorAll('img');
+    robotrons.insertBefore(images[images.length - 1], images[0]);
     console.log(images)
     
     images[0].style.translate = '-375px';
@@ -47,8 +79,8 @@ async function voltarSlide() {
     images[1].style.transition = 'none';
 }
 
-async function avancarSlide() {
-    const images = slide.querySelectorAll('img');
+async function avancarSubstituicao() {
+    const images = robotrons.querySelectorAll('img');
 
     images[1].style.translate = '-375px';
     images[1].style.transition = '.3s';
@@ -57,5 +89,5 @@ async function avancarSlide() {
 
     images[1].style.transition = 'none';
     images[1].style.translate = '0';
-    slide.insertBefore(images[0], images[images.length - 1]);
+    robotrons.insertBefore(images[0], images[images.length - 1]);
 }
