@@ -7,6 +7,12 @@ const altura = document.querySelector("#altura");
 function mostrarTela() {
     const valorPeso = Number(peso.value.replace(',', '.'));
     const valorAltura = Number(altura.value.replace(',', '.'));
+    
+    if (isNaN(valorAltura) || isNaN(valorPeso)) {
+        alert('Caracteres não numerais nos campos Peso ou Altura');
+        return;
+    }
+    
     const imc = calcularIMC(valorPeso, valorAltura);
     
     tela.innerHTML = `
