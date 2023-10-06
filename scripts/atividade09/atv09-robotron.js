@@ -20,8 +20,18 @@ function mudarDemonstracaoDoRobotron(tipo) {
     }
 }
 
-btnVoltar.addEventListener('click', () => voltar());
-btnAvancar.addEventListener('click', () => avancar());
+btnVoltar.addEventListener('click', async () => {
+    btnVoltar.setAttribute('disabled', true);
+    voltar();
+    await delay(300);
+    btnVoltar.removeAttribute('disabled');
+});
+btnAvancar.addEventListener('click', async () => {
+    btnAvancar.setAttribute('disabled', true);
+    avancar();
+    await delay(300);
+    btnAvancar.removeAttribute('disabled');
+});
 
 function voltarTrocaDeCor() {
     const images = robotrons.querySelectorAll('img');
@@ -41,41 +51,42 @@ function delay(ms) {
 
 async function voltarSlide() {
     const images = robotrons.querySelectorAll('img');
-    robotrons.insertBefore(images[images.length - 1], images[0]);
-    console.log(images)
-    
-    images[0].style.translate = '-375px';
+    robotrons.insertBefore(images[images.length-1], images[0]);
+    images.forEach(img => {
+        img.style.translate = '-375px';
+    });
     await delay(0);
-    images[0].style.transition = '.5s';
-    images[0].style.translate = '0px';
-    images[1].style.transition = 'none';
+    images.forEach(img => {
+        img.style.transition = '.3s translate';
+        img.style.translate = '0';
+    });
+    await delay(300);
+    images.forEach(img => {
+        img.style.transition = 'none';
+    });
 }
 async function avancarSlide() {
     const images = robotrons.querySelectorAll('img');
-
-    images[1].style.translate = '-375px';
-    images[1].style.transition = '.3s';
-    images[0].style.translate = '-375px';
-    images[0].style.transition = '.3s';
-    // Aguarda um atraso de 500 milissegundos (0,5 segundo)
+    images.forEach(img => {
+        img.style.transition = '.3s translate';
+        img.style.translate = '-375px';
+    });
     await delay(300);
-
-    images[1].style.transition = 'none';
-    images[0].style.transition = 'none';
-    images[1].style.translate = '0';
-    images[0].style.translate = '0';
-    robotrons.insertBefore(images[0], images[images.length - 1]);
+    images.forEach(img => {
+        img.style.transition = 'none';
+        img.style.translate = '0';
+    });
+    robotrons.appendChild(images[0]);
 }
 
 async function voltarSubstituicao() {
     const images = robotrons.querySelectorAll('img');
     robotrons.insertBefore(images[images.length - 1], images[0]);
-    console.log(images)
     
     images[0].style.translate = '-375px';
     await delay(0);
-    images[0].style.transition = '.5s';
-    images[0].style.translate = '0px';
+    images[0].style.transition = '.5s translate';
+    images[0].style.translate = '0';
     images[1].style.transition = 'none';
 }
 
@@ -83,11 +94,11 @@ async function avancarSubstituicao() {
     const images = robotrons.querySelectorAll('img');
 
     images[1].style.translate = '-375px';
-    images[1].style.transition = '.3s';
+    images[1].style.transition = '.3s translate';
     // Aguarda um atraso de 500 milissegundos (0,5 segundo)
     await delay(300);
 
     images[1].style.transition = 'none';
     images[1].style.translate = '0';
-    robotrons.insertBefore(images[0], images[images.length - 1]);
+    robotrons.appendChild(images[0]);
 }
