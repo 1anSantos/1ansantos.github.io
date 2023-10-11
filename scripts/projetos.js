@@ -1,15 +1,17 @@
 const searchCard = document.querySelector("#search-card");
-const searchClose = document.querySelector("#search-close");
+const searchClear = document.querySelector("#search-clear");
 const projectCards = document.querySelector("#project-cards");
 const allCards = Array.from(projectCards.querySelectorAll(".card"));
 
-organize()
-window.addEventListener("resize", organize);
+organize()// rodar o script logo no começo
+window.addEventListener("resize", organize); // rodar o script a cada resize da tela
 
-searchClose.addEventListener("click", () => {
+// searchGlass.addEventListener("click", isMobile);
+
+searchClear.addEventListener("click", () => {
     searchCard.value = "";
     search();
-});// rodar o script logo no começo
+});
 
 function search() {
     const cardsSearched = allCards.filter((card) => {
@@ -32,11 +34,11 @@ function organize() {
     }
     if(test(cardsOpen)) return;
     const cardsFilter = cardsOpen.filter((card) => {
-        const test1 = card !== cardsOpen[cardsOpen.length-1] && window.innerWidth > 880;
-        const test2 = card.style.gridColumn === "1 / span 2";
-        return test1 || test2
+        if (isOdd && card === cardsOpen[cardsOpen.length-1] && window.innerWidth > 880) {
+            return false;
+        }
+        return card.style.gridColumn === "1 / span 2";
     });
-    console.log(cardsFilter)
     cardsFilter.forEach((card) => {
         return card.style.gridColumn = "span 1";
     });
