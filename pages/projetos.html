@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="../styles/projetos.css">
 </head>
 <body>
+    <div id="not-found" style="display: none;">
+        <img style="display: none;" id="sad-robot" src="../multimedia/img/sad-robot.png" alt="Robo Triste">
+        <img style="display: none;" src="../multimedia/img/sad-robot-other.png" alt="Robo Triste">
+        <p>Nenhum projeto encontrado com essa pesquisa :&lpar;</p>
+        <p>Tente pesquisar outra coisa</p>
+    </div>
     <div>
         <nav>
             <div id="nav-links">
@@ -19,7 +25,7 @@
                 <label id="search-glass" for="search-card"><i class="fa-solid fa-search fa-lg"></i></label>
                 <i id="search-back" class="fa-solid fa-arrow-left fa-xl" style="display: none;"></i>
                 <div id="search-area">
-                    <input type="search" id="search-card" onkeyup="search()">
+                    <input type="search" id="search-card">
                     <i id="search-clear" class="fa-solid fa-xmark"></i>
                 </div>
             </div>
