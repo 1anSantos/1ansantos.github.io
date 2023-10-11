@@ -17,7 +17,7 @@ function mostrarTela() {
     
     tela.innerHTML = `
     <div id="fechar" onclick="fecharTela()">X</div>
-    <p>Olá, ${nome.value.trim().replace(/  +/g,' ')}.</p>
+    <p>Olá, ${nome.value.trim()}.</p>
     <p>O seu IMC é de ${imc}</p>
     `;
     tela.style.display = "block";
