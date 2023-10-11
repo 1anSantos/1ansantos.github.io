@@ -1,17 +1,36 @@
+// ----- Variáveis -----
+const notFound = document.querySelector("#not-found");
+const navLinks = document.querySelector("#nav-links");
+const searchArea = document.querySelector("#search-area");
+const searchGlass = document.querySelector("#search-glass");
+const searchBack = document.querySelector("#search-back");
 const searchCard = document.querySelector("#search-card");
 const searchClear = document.querySelector("#search-clear");
 const projectCards = document.querySelector("#project-cards");
 const allCards = Array.from(projectCards.querySelectorAll(".card"));
 
+// ----- Functions -----
 organize()// rodar o script logo no começo
 window.addEventListener("resize", organize); // rodar o script a cada resize da tela
 
 // searchGlass.addEventListener("click", isMobile);
 
+// Limpar a caixa de pesquisa + mostrar todos os cards
 searchClear.addEventListener("click", () => {
     searchCard.value = "";
     search();
 });
+
+// Pesquisar apenas com o Enter
+/*
+searchCard.addEventListener("keyup", (keyPressed) => {
+    if (keyPressed.key !== "Enter") return;
+    search();
+});
+*/
+// Pesquisar a cada clique de tecla
+searchCard.addEventListener("keyup", search);
+
 
 function search() {
     const cardsSearched = allCards.filter((card) => {
@@ -23,9 +42,21 @@ function search() {
 
     allCards.forEach((card) => card.style.display = "none");
     cardsSearched.forEach((card) => card.style.display = "grid");
-    organize();
+
+    if (cardsSearched.length !== 0) {
+        notFound.style.display = "none";
+        organize();
+    }
+    else {
+        if (notFound.style.display !== "none") return;
+        notFound.style.display = "flex";
+        let num = parseInt(Math.random() * 2);
+        notFound.children[num].style.display = "block";
+        notFound.children[num === 1 ? 0 : 1].style.display = "none";
+    }
 }
 
+// Alterar entre um card grande para quantidades ímpares em pc
 function organize() {
     const cardsOpen = allCards.filter((card) => card.style.display !== "none");
     const isOdd = cardsOpen.length % 2 !== 0;
