@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/projetos.css">
     <title>Projetos</title>
+    <script src="https://kit.fontawesome.com/b03cf2bbe7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/projetos.css">
 </head>
 <body>
     <div>
         <nav>
-            <div style="user-select: none;">
-                <a target="_self" href="../index.html">PÃ¡gina Inicial</a>
-                <a target="_self" href="./curriculo.html">CurrÃ­culo</a>
+            <div id="nav-links">
+                <a target="_self" href="../index.html">Página Inicial</a>
+                <a target="_self" href="./curriculo.html">Currículo</a>
                 <a target="_blank" href="https://github.com/1anSantos/1ansantos.github.io">Github</a>
             </div>
             <div id="search-bar">
                 <label id="search-glass" for="search-card"><i class="fa-solid fa-search fa-lg"></i></label>
+                <i id="search-back" class="fa-solid fa-arrow-left fa-xl" style="display: none;"></i>
                 <div id="search-area">
                     <input type="search" id="search-card" onkeyup="search()">
-                    <i id="search-close" class="fa-solid fa-xmark"></i>
+                    <i id="search-clear" class="fa-solid fa-xmark"></i>
                 </div>
             </div>
         </nav>
@@ -320,6 +322,5 @@
     </div>
 
     <script src="../scripts/projetos.js"></script>
-    <script src="https://kit.fontawesome.com/b03cf2bbe7.js" crossorigin="anonymous"></script>
 </body>
 </html>
