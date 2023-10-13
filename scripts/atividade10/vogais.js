@@ -1,7 +1,13 @@
 const input = document.getElementById("texto");
 const textoFrase = document.getElementById("frase");
 const textoVogal = document.getElementById("vogais_quantidade");
-const vogais = ["a", "e", "i", "o", "u"];
+const vogais = [
+    "a", "á", "à", "ã", "â",
+    "e", "é", "è", "ê",
+    "i", "í", "ì", "î",
+    "o", "ó", "ò", "õ", "ô",
+    "u", "ú", "ù", "û",
+];
 
 function contarVogais() {
     const texto = input.value;

@@ -12,9 +12,12 @@ separar.addEventListener("click", () => {
     const lista = txt.split(' ');
     nome.value = lista[0];
     sobrenome.value = lista[1] || '';
+    nomeCompleto.value = "";
 });
 
 juntar.addEventListener("click", () => {
     const lista = [nome.value, sobrenome.value];
     nomeCompleto.value = lista.join(' ').trim();
+    nome.value = "";
+    sobrenome.value = "";
 });

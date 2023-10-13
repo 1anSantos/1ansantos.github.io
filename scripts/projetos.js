@@ -1,4 +1,4 @@
-// ----- Variáveis -----
+//* ----- Variáveis ----- 
 const notFound = document.querySelector("#not-found");
 const navLinks = document.querySelector("#nav-links");
 const searchArea = document.querySelector("#search-area");
@@ -9,7 +9,7 @@ const searchClear = document.querySelector("#search-clear");
 const projectCards = document.querySelector("#project-cards");
 const allCards = Array.from(projectCards.querySelectorAll(".card"));
 
-// ----- Functions -----
+//* ----- Functions ----- 
 organize()// rodar o script logo no começo
 window.addEventListener("resize", organize); // rodar o script a cada resize da tela
 
@@ -29,7 +29,7 @@ searchCard.addEventListener("keyup", (keyPressed) => {
 });
 */
 // Pesquisar a cada clique de tecla
-searchCard.addEventListener("keyup", search);
+searchCard.addEventListener("input", search);
 
 
 function search() {

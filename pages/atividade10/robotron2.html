@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
-    <title>Robotron 2000</title>
+    <link rel="shortcut icon" type="image/jpg" href="../../multimedia/ico/robotron.ico"/>
+    <title>Robotron 3000</title>
 
-    <link rel="stylesheet" href="./robotron2.css">
+    <link rel="stylesheet" href="../../styles/atividade10/robotron2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
@@ -15,7 +15,7 @@
 <body>
     <main>
         <section class="robotron">
-            <img class="robo" src="./img/robotron.png" alt="Robotron">
+            <img class="robo" src="../../multimedia/img/robotron.png" alt="Robotron">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
         </section>
 
@@ -50,46 +50,46 @@
             <form action="" method="dialog" class="montador">
                 <div class="box montador-conteudo">
                     <div class="peca">
-                        <label for="" class="peca-titulo">Braços</label>
+                        <label for="braco" class="peca-titulo">Braços</label>
                         <div class="controle">
                             <button class="controle-ajuste">-</button>
-                            <input type="text" class="controle-contador" value="00">
+                            <input type="text" id="braco" class="controle-contador" value="00" disabled>
                             <button class="controle-ajuste">+</button>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
-                        <label for="" class="peca-titulo">Blindagem</label>
+                        <label for="blindagem" class="peca-titulo">Blindagem</label>
                         <div class="controle">
                             <button class="controle-ajuste">-</button>
-                            <input type="text" class="controle-contador" value="00" disabled>
+                            <input type="text" id="blindagem" class="controle-contador" value="00" disabled>
                             <button class="controle-ajuste">+</button>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
-                        <label for="" class="peca-titulo">Núcleos</label>
+                        <label for="nucleos" class="peca-titulo">Núcleos</label>
                         <div class="controle">
                             <button class="controle-ajuste">-</button>
-                            <input type="text" class="controle-contador" value="00" disabled>
+                            <input type="text" id="nucleos" class="controle-contador" value="00" disabled>
                             <button class="controle-ajuste">+</button>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
-                        <label for="" class="peca-titulo">Pernas</label>
+                        <label for="pernas" class="peca-titulo">Pernas</label>
                         <div class="controle">
                             <button class="controle-ajuste">-</button>
-                            <input type="text" class="controle-contador" value="00" disabled>
+                            <input type="text" id="pernas" class="controle-contador" value="00" disabled>
                             <button class="controle-ajuste">+</button>
                         </div>
                     </div>
                     <hr class="linha">
                     <div class="peca">
-                        <label for="" class="peca-titulo">Foguetes</label>
+                        <label for="foguetes" class="peca-titulo">Foguetes</label>
                         <div class="controle">
                             <button class="controle-ajuste">-</button>
-                            <input type="text" class="controle-contador" value="00" disabled>
+                            <input type="text" id="foguetes" class="controle-contador" value="00" disabled>
                             <button class="controle-ajuste">+</button>
                         </div>
                     </div>
@@ -98,6 +98,6 @@
             </form>
         </section>
     </main>
-    <script src="./robotron2.js"></script>
+    <script src="../../scripts/atividade10/robotron2.js"></script>
 </body>
 </html>

@@ -1,17 +1,10 @@
-<!-- <thead>
-    <tr>
-        <td>Categoria</td>
-        <td>Valor</td>
-        <td>Data</td>
-    </tr>
-</thead> -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extrato Bancario</title>
-    <link rel="stylesheet" href="./extrato-bancario.css">
+    <link rel="stylesheet" href="../../styles/atividade10/extrato-bancario.css">
 </head>
 <body>
     <h1>Extrato Bancário</h1>
@@ -30,23 +23,23 @@
 
         <div id="buttons">
             <button onclick="adicionar()">Adicionar</button>
-            <a href="./extrato-bancario.html">
-                <button onclick="calcular()" formnovalidate>Calcular</button>
-            </a>
+            <button onclick="calcular()" formnovalidate>Calcular</button>
         </div>
     </form>
 
     <table>
         <caption>Extrato Bancario</caption>
-        <tbody id="extrato-linhas">
+        <thead>
             <tr>
                 <td>Categoria</td>
-                <td>Data</td>
                 <td>Valor</td>
+                <td>Data</td>
             </tr>
+        </thead>
+        <tbody id="extrato-linhas">
         </tbody>
     </table>
-
+    
     <div id="extrato-resumo" style="display: none;">
         <h2>Resumo</h2>
         <p id="extrato-total">Total: </p>
@@ -54,7 +47,7 @@
         <p id="extrato-maior-gasto-mercado">Maior gasto com Mercado: </p>
         <p id="extrato-total-mercado">Total de gastos com Mercado: </p>
     </div>
-
-    <script src="./calcular-extrato.js"></script>
+    
+    <script src="../../scripts/atividade10/calcular-extrato.js"></script>
 </body>
 </html>

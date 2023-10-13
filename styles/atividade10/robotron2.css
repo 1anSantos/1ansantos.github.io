@@ -9,7 +9,7 @@
 }
 
 body {
-    background: url(./img/fundo.jpg);
+    background: url(../../multimedia/img/fundo.jpg);
     background-position: center center;
     background-size: cover cover;
     padding: 0;
@@ -30,7 +30,7 @@ main {
 }
 
 .robotron {
-    background: url(./img/estrutura.png) no-repeat;
+    background: url(../../multimedia/img/estrutura.png) no-repeat;
     background-position: center center;
     margin: 0;
     flex-basis: 40%;
@@ -117,14 +117,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .15s;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     color: var(--main-cinza);
-    font-size: 4em;
+    font-size: 3em;
     background: var(--main-preto);
     border: 3px solid var(--main-cinza);
     cursor: pointer;
+}
+.controle-ajuste:hover {
+    opacity: 0.5;
 }
 
 .linha {

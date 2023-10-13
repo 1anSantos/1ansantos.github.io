@@ -1,0 +1,53 @@
+body,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid #555;
+    width: 100%;
+}
+
+form table {
+    width: 500px
+}
+
+table {
+    margin-bottom: 10px;
+}
+
+#dados-pessoais {
+    align-items: center;
+}
+#dados-pessoais td:has(label) {
+    text-align: end;
+}
+#dados-pessoais #telefone-area {
+    text-align: start;
+}
+
+#ddd,
+#ramal {
+    width: 30px;
+}
+#telefone {
+    width: 100px
+}
+
+#informacao-matricula td {
+    vertical-align: text-top;
+}
+
+#buttons {
+    margin-top: 5px;
+}
+
+#buttons button:nth-child(1) {
+    margin-right: 5px;
+}
+
+#buttons button:nth-child(2) {
+    margin-left: 5px;
+}
