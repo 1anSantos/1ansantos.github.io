@@ -1,0 +1,70 @@
+/* thead td {
+    font-weight: bolder;
+    background-color: #ddd;
+} */
+/* button:nth-child(1) {
+    margin-right: 10px;
+}
+
+button:nth-child(2) {
+    margin-right: 10px;
+} */
+body {
+    background-color: #fff;
+    padding-left: 20px;
+}
+
+#inputs {
+    display: grid;
+    text-align: end;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    grid-template-columns: auto 1fr;
+}
+
+input,
+select {
+    box-sizing: content-box;
+    height: 15px;
+    padding: 5px 10px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    grid-column: 2;
+}
+
+
+button {
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 2.5px 5px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #000;
+    margin-top: 20px;
+    width: 300px;
+}
+
+caption {
+    font-weight: bolder;
+    background-color: #aaa;
+    border: 2px solid #000;
+    border-bottom: none;
+}
+
+td {
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #000;
+}
+
+#extrato-resumo h2 {
+    width: 300px;
+    text-align: center;
+}

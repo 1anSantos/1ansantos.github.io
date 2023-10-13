@@ -1,0 +1,60 @@
+<!-- <thead>
+    <tr>
+        <td>Categoria</td>
+        <td>Valor</td>
+        <td>Data</td>
+    </tr>
+</thead> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato Bancario</title>
+    <link rel="stylesheet" href="./extrato-bancario.css">
+</head>
+<body>
+    <h1>Extrato Bancário</h1>
+    <form method="dialog" id="inputs">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria">
+            <option selected> Mercado </option>
+            <option> Transporte </option>
+        </select>
+
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <div id="buttons">
+            <button onclick="adicionar()">Adicionar</button>
+            <a href="./extrato-bancario.html">
+                <button onclick="calcular()" formnovalidate>Calcular</button>
+            </a>
+        </div>
+    </form>
+
+    <table>
+        <caption>Extrato Bancario</caption>
+        <tbody id="extrato-linhas">
+            <tr>
+                <td>Categoria</td>
+                <td>Data</td>
+                <td>Valor</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="extrato-resumo" style="display: none;">
+        <h2>Resumo</h2>
+        <p id="extrato-total">Total: </p>
+        <div id="extrato-meses"></div>
+        <p id="extrato-maior-gasto-mercado">Maior gasto com Mercado: </p>
+        <p id="extrato-total-mercado">Total de gastos com Mercado: </p>
+    </div>
+
+    <script src="./calcular-extrato.js"></script>
+</body>
+</html>
