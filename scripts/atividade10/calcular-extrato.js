@@ -38,9 +38,7 @@ class Gasto {
     }
     static atualizarTotalGasto() {
         Gasto._totalGasto = 0;
-        Gasto._listaGastos.forEach ((gasto) => {
-            Gasto._totalGasto += gasto.valor;
-        });
+        Gasto._totalGasto = Gasto._listaGastos.reduce((sum, obj) => sum + obj.valor, 0);
     }
     static getLista() {
         return Gasto._listaGastos;
@@ -76,6 +74,7 @@ class Gasto {
 formInputs.addEventListener("submit", adicionarValores);
 
 btnExemplo.addEventListener("click", () => {
+    Gasto.limparLista();
     const lista = [
         new Gasto("Viagem", "2022-09-08", 368.95),
         new Gasto("Eventos", "2023-02-25", 50),
