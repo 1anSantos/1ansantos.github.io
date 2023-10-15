@@ -1,70 +1,116 @@
-/* thead td {
-    font-weight: bolder;
-    background-color: #ddd;
-} */
-/* button:nth-child(1) {
-    margin-right: 10px;
-}
-
-button:nth-child(2) {
-    margin-right: 10px;
-} */
 body {
-    background-color: #fff;
-    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#inputs {
+#form-inputs {
     display: grid;
-    text-align: end;
-    align-items: center;
-    gap: 10px;
-    width: 300px;
     grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: end;
+    gap: 10px;
 }
 
-input,
-select {
-    box-sizing: content-box;
-    height: 15px;
-    padding: 5px 10px;
+#form-inputs input,
+#form-inputs select {
+    box-sizing: border-box;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#error {
+    color: #ff0000;
+    text-align: start;
+    grid-column: 2;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin: 0;
 }
 
 #buttons {
-    display: flex;
-    justify-content: center;
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
 }
 
+#buttons #limpar-extrato {
+    grid-column: 1 / span 2;
+}
 
 button {
-    margin: 0 10px;
     cursor: pointer;
-    padding: 2.5px 5px;
+    padding: 3px;
+    transition: .2s;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #777;
+    background-color: #eee;
+}
+button:hover {
+    border-color: #111;
+    background-color: #ccc;
 }
 
 table {
+    margin-top: 25px;
     border-collapse: collapse;
-    border: 2px solid #000;
-    margin-top: 20px;
-    width: 300px;
 }
 
 caption {
-    font-weight: bolder;
-    background-color: #aaa;
+    background-color: #777;
     border: 2px solid #000;
     border-bottom: none;
+    padding: 5px 0;
+}
+
+thead tr {
+    background-color: #aaa;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
 }
 
 td {
-    width: 100px;
-    padding: 5px;
     text-align: center;
+    width: 125px;
+    padding: 5px 0;
     border: 2px solid #000;
 }
 
-#extrato-resumo h2 {
-    width: 300px;
+#resumo {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 250px;
+    padding: 5px 15px 10px 20px;
+    background-color: #eee;
+    border: 1px solid #000;
+}
+
+#resumo h2 {
     text-align: center;
+}
+
+.valor {
+    color: #ff0000;
+}
+
+#ponta-papel {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -1px;
+    right: -1px;
+    box-shadow: -5px 5px 5px #aaa;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background: linear-gradient(45deg, #eee 49%, #000 50%, #fff 51%);
 }
