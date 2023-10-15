@@ -9,10 +9,13 @@ const cores = [
     "#508223", "#420356", "#00ff00", "#f08fff"
 ]
 
+const html = document.querySelector("html");
 const texto = document.querySelector("#text");
 
-document.querySelector("html").addEventListener("click", js_style)
-
+html.addEventListener("keyup", (event) =>{
+    if (event.key !== " ") return;
+    js_style();
+});
 
 function js_style() {
     const fonteTamanho = parseInt(Math.random() * (30 - 15)) + 16;
