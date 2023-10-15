@@ -1,4 +1,11 @@
-const DDDpossiveis = [
+const form = document.querySelector("#pre-matricula");
+const dddInput = document.querySelector("#ddd");
+const emailInput = document.querySelector("#email");
+const checkboxes = document.querySelectorAll('input[name="atividade-extracurricular"]');
+
+form.addEventListener("submit", submitMessage);
+
+const DDD = [
     61, // Distrito Federal
     62, 64, // Goiás
     65, 66, // Mato Grosso
@@ -28,34 +35,39 @@ const DDDpossiveis = [
     47, 48, 49 // Santa Catarina
 ];
 
-const form = document.getElementById("form");
-const ddd = document.getElementById("ddd");
-const email = document.getElementById("email");
-const checkBox = document.getElementsByName("atividade-extracurricular");
-
-form.addEventListener("submit", submitMessage);
-
 function submitMessage(event) {
-    if (verificarCampos()) {
+    if (!verificarForm()) {
         event.preventDefault();
         return;
     }
     alert('Formulário enviado com sucesso!');
 }
 
-function verificarCampos() {
-    if (!DDDpossiveis.includes(Number(ddd.value))) {
-        alert("DDD inválido");
-        return true;
+function verificarForm() {
+    if (!verificarDDD()) {
+        alert("DDD inválido!");
+        return false;
     }
-    if (!email.value.includes(".")) {
-        alert("Email inválido!\nNão contém ponto.");
-        return true;
+    if(!verificarEmail()) {
+        alert("O email deve conter @ e ponto (.)!");
+        return false;
     }
-    const checkBoxAtiva = Array.from(checkBox).filter(check => check.checked);
-    if (checkBoxAtiva.length > 3) {
-        alert("Só aceitamos 3 atividades extracurriculares!");
-        return true;
+    if (!verificarCheckBoxes()) {
+        alert("Só aceitamos no máximo 3 atividades extracurriculares!");
+        return false;
     }
-    return false
+    return true;
+}
+
+function verificarDDD() {
+    return DDD.includes(Number(dddInput.value));
+}
+
+function verificarEmail() {
+    return emailInput.value.includes(".");
+}
+
+function verificarCheckBoxes() {
+    const ativos = [...checkboxes].filter((input) => input.checked);
+    return ativos.length <= 3;
 }
