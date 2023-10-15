@@ -1,24 +1,25 @@
-const input = document.getElementById("texto");
-const textoFrase = document.getElementById("frase");
-const textoVogal = document.getElementById("vogais_quantidade");
-const vogais = [
-    "a", "á", "à", "ã", "â",
-    "e", "é", "è", "ê",
-    "i", "í", "ì", "î",
-    "o", "ó", "ò", "õ", "ô",
-    "u", "ú", "ù", "û",
-];
+const input = document.querySelector("#texto");
+const btn = document.querySelector("#btn-contar");
+const txtFrase = document.querySelector("#frase");
+const txtVogaisQnt = document.querySelector("#qnt-vogais");
 
-function contarVogais() {
+btn.addEventListener("click", mostrarInfo);
+input.addEventListener("keyup", (keyPressed) => {
+    if (keyPressed.key !== "Enter") return;
+    mostrarInfo();
+});
+
+const vogais = ["a", "e", "i", "o", "u"];
+
+function mostrarInfo () {
     const texto = input.value;
-    const textoVogais = texto.split("").filter(separarVogais);
-    // o split transforma a string em um array para poder usar o filter
-    // split não altera o elemento original
-
-    textoFrase.innerHTML = "Frase: " + texto;
-    textoVogal.innerHTML = "Quantidade de vogais: " + textoVogais.length;
+    const qntVogais = contarVogais(texto);
+    txtFrase.innerText = texto;
+    txtVogaisQnt.innerText = qntVogais;
 }
 
-function separarVogais(elemento) {
-    return vogais.includes(elemento);
+function contarVogais(texto) {
+    const noSpecialCaracter = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const vogaisNoTexto = noSpecialCaracter.split("").filter((letra) => vogais.includes(letra));
+    return vogaisNoTexto.length;
 }
