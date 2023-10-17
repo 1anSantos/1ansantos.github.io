@@ -49,7 +49,7 @@ function verificarForm() {
         return false;
     }
     if(!verificarEmail()) {
-        alert("O email deve conter @ e ponto (.)!");
+        alert('O email deve conter um "." após o "@"!');
         return false;
     }
     if (!verificarCheckBoxes()) {
@@ -64,7 +64,8 @@ function verificarDDD() {
 }
 
 function verificarEmail() {
-    return emailInput.value.includes(".");
+    const emailDividido = emailInput.value.split("@");
+    return emailDividido[1].includes(".");
 }
 
 function verificarCheckBoxes() {
