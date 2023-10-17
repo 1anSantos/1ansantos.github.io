@@ -1,6 +1,7 @@
 const error = document.querySelector("#error");
 const input = document.querySelector("#txtNumRows");
 const table = document.querySelector("#sampleTableBody");
+let contador = 3;
 
 input.addEventListener("keyup", (keyPressed) => {
     if (keyPressed.key === "Enter") {
@@ -23,13 +24,13 @@ function js_add_rows() {
     }
 
     input.value = "";
-    table.innerHTML = ``;
     for (let i = 1; i <= inputValue; i++) {
         table.innerHTML += `
         <tr>
-            <td>Row${i} cell1</td>
-            <td>Row${i} cell2</td>
+            <td>Row${contador} cell1</td>
+            <td>Row${contador} cell2</td>
         </tr>
         `
+        contador++;
     }
 }
