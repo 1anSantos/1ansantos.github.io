@@ -7,6 +7,7 @@ btnPreviousRobotron.addEventListener("click", () => {
     const robotronIMG = robotronDiv.querySelectorAll(".robo");
     robotronDiv.insertBefore(robotronIMG[robotronIMG.length - 1], robotronIMG[0]);
 });
+
 btnNextRobotron.addEventListener("click", () => {
     const robotronIMG = robotronDiv.querySelectorAll(".robo");
     robotronDiv.appendChild(robotronIMG[0]);
