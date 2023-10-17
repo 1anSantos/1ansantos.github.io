@@ -1,4 +1,16 @@
 const buttons = document.querySelectorAll(".controle-ajuste");
+const btnPreviousRobotron = document.querySelector("#previous");
+const btnNextRobotron = document.querySelector("#next");
+const robotronDiv = document.querySelector("#robotron-container");
+
+btnPreviousRobotron.addEventListener("click", () => {
+    const robotronIMG = robotronDiv.querySelectorAll(".robo");
+    robotronDiv.insertBefore(robotronIMG[robotronIMG.length - 1], robotronIMG[0]);
+});
+btnNextRobotron.addEventListener("click", () => {
+    const robotronIMG = robotronDiv.querySelectorAll(".robo");
+    robotronDiv.appendChild(robotronIMG[0]);
+});
 
 buttons.forEach(botao => {
     botao.addEventListener("click", () => mudarValor(botao));

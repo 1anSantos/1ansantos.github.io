@@ -41,8 +41,36 @@ main {
     height: 110%;
     z-index: 1;
     position: absolute;
-    left: -20%;
+    left: -15%;
     top: -5%;
+}
+
+.btn-robotron {
+    color: #ddd;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    z-index: 10;
+    height: 65px;
+    width: 50px;
+    top: 50%;
+    border: none;
+    position: absolute;
+    transition: .2s background;
+    background: rgba(0,0,0,0.6);
+}
+
+.btn-robotron:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+#previous {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+#next {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    right: 0;
 }
 
 .titulo {
