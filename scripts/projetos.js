@@ -43,15 +43,15 @@ searchClear.addEventListener("click", () => {
 
 // Pesquisar a cada clique de tecla
 searchCard.addEventListener("input", () => {
-    if (window.innerWidth < 880) return;
+    // if (window.innerWidth < 880) return;
     search();
 });
 
-// Pesquisar apenas com o Enter
-searchCard.addEventListener("keyup", (keyPressed) => {
-    if (keyPressed.key !== "Enter") return;
-    search();
-});
+// // Pesquisar apenas com o Enter
+// searchCard.addEventListener("keyup", (keyPressed) => {
+//     if (keyPressed.key !== "Enter") return;
+//     search();
+// });
 
 
 //* ----- Functions ----- 
