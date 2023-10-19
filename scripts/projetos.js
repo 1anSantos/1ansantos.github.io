@@ -1,37 +1,60 @@
-//* ----- Variáveis ----- 
-const notFound = document.querySelector("#not-found");
+//* ----- Variables ----- 
 const navLinks = document.querySelector("#nav-links");
+
+const searchBar = document.querySelector("#search-bar");
 const searchArea = document.querySelector("#search-area");
 const searchGlass = document.querySelector("#search-glass");
 const searchBack = document.querySelector("#search-back");
 const searchCard = document.querySelector("#search-card");
 const searchClear = document.querySelector("#search-clear");
+
+const notFound = document.querySelector("#not-found");
+
 const projectCards = document.querySelector("#project-cards");
 const allCards = Array.from(projectCards.querySelectorAll(".card"));
 
-//* ----- Functions ----- 
+//-------------------------------------------------------------------------------------
+// initial commands
 organize()// rodar o script logo no começo
 window.addEventListener("resize", organize); // rodar o script a cada resize da tela
+//-------------------------------------------------------------------------------------
 
-// searchGlass.addEventListener("click", isMobile);
+//* ----- Event Listeners ----- 
+searchGlass.addEventListener("click", () => {
+    if (window.innerWidth > 880) return;
+    openSearchBarInMobile();
+});
 
-// Limpar a caixa de pesquisa + mostrar todos os cards
+searchBack.addEventListener("click", () => {
+    if (searchArea.style.display !== "block") return;
+    leaveSearchBarInMobile();
+});
+
+window.addEventListener("popstate", () => {
+    if (searchArea.style.display !== "block") return;
+    leaveSearchBarInMobile();
+});
+
+// limpar pesquisa
 searchClear.addEventListener("click", () => {
     searchCard.value = "";
     search();
 });
 
+// Pesquisar a cada clique de tecla
+searchCard.addEventListener("input", () => {
+    if (window.innerWidth < 880) return;
+    search();
+});
+
 // Pesquisar apenas com o Enter
-/*
 searchCard.addEventListener("keyup", (keyPressed) => {
     if (keyPressed.key !== "Enter") return;
     search();
 });
-*/
-// Pesquisar a cada clique de tecla
-searchCard.addEventListener("input", search);
 
 
+//* ----- Functions ----- 
 function search() {
     const cardsSearched = allCards.filter((card) => {
         const title = card.querySelector(".card-title").textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -56,7 +79,6 @@ function search() {
     }
 }
 
-// Alterar entre um card grande para quantidades ímpares em pc
 function organize() {
     const cardsOpen = allCards.filter((card) => card.style.display !== "none");
     const isOdd = cardsOpen.length % 2 !== 0;
@@ -85,4 +107,20 @@ function test(cards) {
             return card.style.gridColumn !== "1 / span 2";
         }
     });
+}
+
+function openSearchBarInMobile() {
+    navLinks.style.display = "none";
+    searchGlass.style.display = "none";
+    searchBar.style.width = "100%";
+    searchBack.style.display = "block";
+    searchArea.style.display = "block";
+}
+
+function leaveSearchBarInMobile() {
+    navLinks.style.display = "block";
+    searchGlass.style.display = "block";
+    searchBar.style.width = "auto";
+    searchBack.style.display = "none";
+    searchArea.style.display = "none";
 }

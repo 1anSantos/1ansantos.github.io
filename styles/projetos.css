@@ -56,13 +56,17 @@ a:hover {
     text-decoration-line: underline;
 }
 
+#all-content {
+    display: grid;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    height: 21px;
     grid-row: 1;
-    grid-column: 1 / span 2;
     background-color: #2A2A2A;
     border: 2px solid #000000;
     /* box-shadow: 0 0 10px #000000; */
@@ -79,6 +83,7 @@ nav {
 #search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     color: #FFB500;
     margin-right: 20px;
 }
@@ -119,12 +124,12 @@ nav {
 
 #search-card::selection {
     color: #000;
-    background-color: #FFB500;
+    background-color: #ffb700a4;
 }
 
 #search-card:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px #520096 inset;
-    -webkit-text-fill-color: #ebad12;
+    -webkit-box-shadow:0 0 0 50px #723706 inset;
+    -webkit-text-fill-color: #ffee00;
 }
 
 #search-card::-webkit-search-cancel-button {
@@ -199,7 +204,7 @@ div.card div.card-footer div.vertical-line {
 
 #not-found p {
     opacity: 0.6;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 #not-found img {
@@ -211,15 +216,29 @@ div.card div.card-footer div.vertical-line {
 }
 
 @media screen and (max-width: 880px) {
-    #project-cards {
-        grid-template-columns: 1fr;
-    }
-
-    #search-area {
-        display: none;
+    #all-content {
+        width: 100%;
     }
 
     #nav-links a {
         margin: 10px;
+    }
+
+    #search-bar {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #search-area {
+        display: none;
+        width: 100%;
+    }
+
+    #search-card {
+        width: calc(100% - 20px);
+    }
+
+    #project-cards {
+        grid-template-columns: 1fr;
     }
 }
