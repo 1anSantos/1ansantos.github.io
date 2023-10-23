@@ -58,8 +58,8 @@ searchCard.addEventListener("input", () => {
 function search() {
     const cardsSearched = allCards.filter((card) => {
         const title = card.querySelector(".card-title").textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLowerCase();
-        const value = searchCard.value.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLowerCase();
-        const result = title.includes(value);
+        const value = searchCard.value.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLowerCase().split(" ");
+        const result = value.every(searchValue => title.includes(searchValue));
         return result;
     });
 
