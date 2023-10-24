@@ -140,7 +140,7 @@ main .name {
     display: flex;
 }
 .social-network i {
-    transition: .1s;
+    transition: .1s scale, .1s opacity;
     margin: 0px 5px;
 }
 .social-network i:hover {
