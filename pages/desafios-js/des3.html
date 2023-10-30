@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+<body>
+    <input type="text">
+    <ul>
+    </ul>
+    <script>
+        const input = document.querySelector("input");
+        const ul = document.querySelector("ul");
+
+        input.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                const valor = input.value.trim().replace(/ +/g, " ");
+                input.value = "";
+                if (valor === "") return;
+                ul.innerHTML += `<li>${valor}</li>`;
+            }
+        })
+    </script>
+</body>
+</html>

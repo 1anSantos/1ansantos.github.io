@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <link rel="stylesheet" href="/styles/desafios-js/des4.css">
+</head>
+<body>
+    <div id="capivara-container">
+        <img src="https://www.infoescola.com/wp-content/uploads/2008/05/capivara-119654188.jpg">
+        <img src="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia10579/capivara-organizacao-social-genitalia-e-comportamento-social-em-cativeiro-cpt.jpg">
+        <img id="img-central" src="https://static.biologianet.com/2023/01/capivara.jpg">
+        <img src="https://static.todamateria.com.br/upload/15/83/1583748930ic5e661742ed9ab-og.jpg">
+        <img src="https://www.infoescola.com/wp-content/uploads/2008/05/capivara-104462285.jpg">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll("img:not([id])");
+        const imgCentral = document.querySelector("#img-central");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                const src = img.src;
+                img.src = imgCentral.src;
+                imgCentral.src = src;
+            });
+        });
+    </script>
+</body>
+</html>

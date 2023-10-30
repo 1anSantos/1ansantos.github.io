@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Ouvinte de Eventos</title>
+    <!-- Inclua o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Exemplo de Ouvinte de Eventos</h1>
+        <form id="eventForm">
+            <div class="form-group">
+                <label for="textInput">Entrada de Texto</label>
+                <input type="text" class="form-control" id="textInput" placeholder="Digite um texto">
+            </div>
+            <div class="form-group">
+                <label for="buttonClick">Clique no Botão</label>
+                <button id="buttonClick" class="btn btn-primary">Clique em Mim</button>
+            </div>
+            <div class="form-group">
+                <label for "mouseOver">Mouse Sobre</label>
+                <div id="mouseOver" class="border p-3">Passe o mouse sobre mim</div>
+            </div>
+            <div class="form-group">
+                <label for="formSubmit">Enviar Formulário</label>
+                <button type="submit" class="btn btn-success" id="formSubmit">Enviar Formulário</button>
+            </div>
+        </form>
+        <div class="alert alert-info mt-4" id="output"></div>
+    </div>
+
+    <!-- Inclua o JS do Bootstrap e o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <script>
+        // Obtenha o elemento do formulário
+        const form = document.getElementById("eventForm");
+
+        // Obtenha o elemento da entrada de texto
+        const textInput = document.getElementById("textInput");
+
+        // Obtenha o botão para o evento de clique
+        const buttonClick = document.getElementById("buttonClick");
+
+        // Obtenha o elemento para o evento de mouse sobre
+        const mouseOver = document.getElementById("mouseOver");
+
+        // Obtenha o botão de envio do formulário para o evento de envio do formulário
+        const formSubmit = document.getElementById("formSubmit");
+
+        // Obtenha o elemento de saída
+        const output = document.getElementById("output");
+
+        // Ouvinte de eventos para alteração na entrada de texto
+        textInput.addEventListener("input", function() {
+            output.innerHTML = `Entrada de Texto Alterada: ${textInput.value}`;
+        });
+
+        // Ouvinte de eventos para o clique no botão
+        buttonClick.addEventListener("click", function() {
+            output.innerHTML = "Botão Clicado!";
+        });
+
+        // Ouvinte de eventos para o evento de mouse sobre
+        mouseOver.addEventListener("mouseover", function() {
+            output.innerHTML = "Mouse Sobre o Elemento!";
+        });
+
+        // Ouvinte de eventos para o envio do formulário
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Impedir o envio real do formulário
+            output.innerHTML = "Formulário Enviado!";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Ouvinte de Eventos: Jogo Simples</title>
+    <style>
+        /* CSS para estilizar a área do jogo */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #character {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="character"></div>
+    <script>
+        // JavaScript para lidar com ouvintes de eventos
+
+        // Obtenha uma referência ao elemento do personagem
+        const character = document.getElementById("character");
+
+        // Posição inicial do personagem
+        let positionX = 0;
+        let positionY = 0;
+
+        // Função para mover o personagem
+        function moveCharacter() {
+            character.style.left = positionX + "px";
+            character.style.top = positionY + "px";
+        }
+
+        // Ouvinte de eventos para o evento de pressionar uma tecla para mover o personagem
+        document.addEventListener("keydown", (event) => {
+            // Responda às entradas das teclas de seta
+            switch (event.key) {
+                case "ArrowUp":
+                    positionY -= 10;
+                    break;
+                case "ArrowDown":
+                    positionY += 10;
+                    break;
+                case "ArrowLeft":
+                    positionX -= 10;
+                    break;
+                case "ArrowRight":
+                    positionX += 10;
+                    break;
+            }
+            moveCharacter();
+        });
+    </script>
+</body>
+</html>

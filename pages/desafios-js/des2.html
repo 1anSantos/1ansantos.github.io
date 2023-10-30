@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem</title>
+    <style>
+        div {
+            overflow: hidden;
+            width: 300px;
+            height: 450px;
+        }
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://i.pinimg.com/474x/bb/16/5c/bb165c8fcecf107962691450d7505dd3.jpg" alt="cachorro">
+    </div>
+    <script>
+        const img = document.querySelector("img");
+        img.addEventListener("mouseover", () => {
+            img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Goldensondika.jpg/1200px-Goldensondika.jpg";
+        });
+        img.addEventListener("mouseout", () => {
+            img.src = "https://i.pinimg.com/474x/bb/16/5c/bb165c8fcecf107962691450d7505dd3.jpg";
+        });
+    </script>
+</body>
+</html>
