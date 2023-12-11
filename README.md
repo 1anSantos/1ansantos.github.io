@@ -4,7 +4,7 @@ Olá, sou Ian dos Santos, e este é o meu site pessoal. Aqui, você poderá expl
 ## Programação WEB (PWEB)
 | `IFAL - Projetos PWEB` |  `Orientador Leo Fernandes` |
 |------------------------|-----------------------------|
-| Aluno: Ian dos Santos  | https://1ansantos.github.io |
+| Aluno: Ian dos Santos  | https://iansantosos.github.io |
 
 ## Character Entities for HTML, CSS and Javascript
 https://oinam.github.io/entities/
