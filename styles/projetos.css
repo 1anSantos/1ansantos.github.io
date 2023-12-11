@@ -164,7 +164,7 @@ div.card>div.card-title {
 
 div.card div.card-title .nova-guia {
     color: #6463ce;
-    transition: .15s;
+    transition: .1s ease-in-out;
 }
 
 div.card div.card-title .nova-guia:hover {
